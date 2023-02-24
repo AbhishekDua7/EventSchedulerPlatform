@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "ddaa78e4-bb88-49c4-bbc8-0a10913f0d13",
+		"name": "EventsSchedule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "http://localhost:8080/EventGo/events/search?keyword=rok",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/EventGo/events/search?keyword=rok",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"EventGo",
+								"events",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "rok"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/EventGo/events",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"title\": \"DJ\",\n        \"description\": \"Music system and person handling various soundtracks with with stage to dance\",\n        \"capacity\": 100,\n        \"price\": 800.0\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/EventGo/events"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/EventGo/events/1001",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"title\": \"DJ\",\n    \"description\": \"Music system and person handling various soundtracks with with stage to dance\",\n     \"capacity\": 100,\n      \"price\": 850.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/EventGo/events/1001"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/EventGo/events/1001",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"title\": \"DJ\",\n    \"description\": \"Music system and person handling various soundtracks with with stage to dance\",\n     \"capacity\": 100,\n      \"price\": 850.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/EventGo/events/1001"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/EventGo/events/search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/EventGo/events/search"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/EventGo/events/availability",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/EventGo/events/availability"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/EventGo/events/1000/availability",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/EventGo/events/1000/availability"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "organization",
+			"item": [
+				{
+					"name": "http://localhost:8080/organization/1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/organization/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/organization/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orgName\": \"EventGo\",\n    \"orgKey\": \"AB1234\",\n    \"dateCreated\": \"2021-10-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/organization/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/organization/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orgName\": \"Dummy\",\n    \"orgKey\": \"AB1234\",\n    \"dateCreated\": \"2021-10-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/organization/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "eventbooking",
+			"item": [
+				{
+					"name": "Create an event booking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "GetBooking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Make payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel a booking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "GetCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MemberOfStaff",
+			"item": [
+				{
+					"name": "GetMemberOfStaffs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
